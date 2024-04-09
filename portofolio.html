@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            /* gap: 10px; */
+            width: 80%;
+            max-width: 1200px;
+            margin: 100px auto;
+        }
+
+        .card {
+            overflow: hidden;
+        }
+
+        .side-a img {
+            width: 100%;
+        }
+
+        .pic1 {
+            grid-area: 1 / 4 / 2 / 6;
+        }
+
+        .pic2 {
+            grid-area: 2 / 1 / 4 / 3;
+        }
+
+        .pic3 {
+            grid-area: 3 / 3 / 4 / 5;
+        }
+
+        .card:nth-child(1) img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="side-a">
+                <img src="imgs/japan.jpg"></img>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="side-a">
+                <img src="imgs/japan2.jpg"></img>
+            </div>
+        </div>
+        <div class="card">
+            <div class="side-a"><img src="imgs/japan3.jpg"></img></div>
+        </div>
+        <div class="card pic1">
+            <div class="side-a"><img src="imgs/pancake.jpg"></img></div>
+        </div>
+        <div class="card pic2">
+            <div class="side-a"><img src="imgs/people1.jpg"></img></div>
+        </div>
+        <div class="card">
+            <div class="side-a"><img src="imgs/people2.jpg"></img></div>
+        </div>
+        <div class="card">
+            <div class="side-a"><img src="imgs/photo1.jpg"></img></div>
+        </div>
+        <div class="card">
+            <div class="side-a"><img src="imgs/sea.jpg"></img></div>
+        </div>
+        <div class="card pic3">
+            <div class="side-a"><img src="imgs/photo1.jpg"></img></div>
+        </div>
+        <div class="card ">
+            <div class="side-a"><img src="imgs/people1.jpg"></img></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

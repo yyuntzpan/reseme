@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* font-family: 'Mukta', sans-serif; 
+    font-family: 'Dosis';
+*/
+* {
+    box-sizing: border-box;
+
+
+}
+
+/* 電腦與平板上應用的樣式 */
+body {
+    background-color: rgb(237, 237, 237);
+    margin: 0px;
+    font-size: 16px;
+    font-family: "Dosis", "Noto Sans TC";
+    letter-spacing: 2px;
+}
+
+header {
+    background-color: #C5CCD9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    background-color: #8697A6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 40%;
+    /* background-color: #C5CCD9; */
+    display: flex;
+    justify-content: space-between;
+}
+
+ol {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+ol li {
+
+    width: 23%;
+    list-style-type: none;
+
+}
+
+ol li a {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    background-color: #283040;
+    color: #C5CCD9;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+}
+
+#About {
+    background: #798C8C;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    /* height: 500px; */
+    align-items: stretch;
+    justify-content: space-between;
+
+}
+
+.h500px {
+    height: 500px
+}
+
+
+.my-photo {
+    display: flex;
+    width: 40%;
+    background-color: #4c5459;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.description {
+    display: flex;
+    width: 50%;
+    background-color: #AEBFBE;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#Experience {
+    background-color: #8697A6;
+    padding-bottom: 60px;
+}
+
+#Experience .container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+
+}
+
+.job-timeline {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job-timeline li {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed slategray;
+    align-items: center;
+
+
+}
+
+.job_date {
+    width: 15%;
+    font-weight: 900;
+}
+
+
+
+.company-name {
+    width: 23%;
+}
+
+.jobpic {
+    display: flex;
+    margin-right: 5%;
+    width: 20%;
+}
+
+
+
+.jobpic img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* 16:9 的比例 */
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+
+.headfont1 {
+    width: 100%;
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 5px #585858;
+    letter-spacing: 2px;
+}
+
+
+#Skills {
+    background-color: #F2EFDF;
+    padding: 3% 0;
+    /* padding: 30px 0;
+     */
+}
+
+.shortcut {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    /* background-color: #59554C; */
+    width: 80%;
+    /* height: 400px; */
+    justify-content: space-between;
+}
+
+.shortcut>li {
+    background-color: #57c58a;
+    text-align: center;
+    line-height: 200px;
+    width: 30%;
+}
+
+#Photo {
+    background-color: #AEBFBE;
+    padding: 20px 0;
+}
+
+.photo-list {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* background-color: #579bc5; */
+}
+
+.photo-list>li {
+    background-color: #59554C;
+    width: 30%;
+    line-height: 100px;
+    /* margin-top: 2%;
+    margin-bottom: 2%; */
+    text-align: center;
+}
+
+.w-50 {
+    width: 50%;
+    margin-top: 20px
+}
+
+#Contact {
+    background-image: linear-gradient(to right top, #b7e976, #85e28e, #54d9a7, #24ccba, #0fbec6);
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+
+#ContactForm {
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(109, 188, 202);
+
+}
+
+label {
+    font-size: 14px;
+    color: #303030;
+    font-family: "Noto Sans TC";
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.myinfo {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.w-50 h2 {
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 5px #4e9177;
+    letter-spacing: 2px;
+}
+
+.w-50 p {
+    color: #303030;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.myinfo {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+.myinfo li {
+    color: #303030;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 400;
+
+
+
+}
+
+.fa-solid {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+
+input[type="text"] {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 0px solid grey;
+    margin-top: 10px;
+    background-color: #e6e6e6;
+}
+
+textarea {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #e6e6e6;
+    border: 0;
+
+}
+
+.btn-confirm {
+    /* margin: 0 auto; */
+    font-size: 14px;
+    font-family: "Noto Sans TC";
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 100px;
+    height: 30px;
+    border: 0px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #b7e976, #85e28e, #54d9a7, #24ccba, #0fbec6);
+    transition: all 0.4s;
+}
+
+.btn-confirm:hover {
+    scale: 1.1;
+    background-color: #0fbec6;
+    color: white;
+    transition: all 0.6s;
+    background-image: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+}
+
+footer p {
+    width: 80%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* 手機 */
+@media screen and (max-width: 500px) {
+    .menu {
+        padding: 10px;
+        margin: 5px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #283040;
+        color: white;
+        border-radius: 50%;
+    }
+
+
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ol {
+        flex-wrap: wrap;
+    }
+
+    ol li {
+        width: 100%;
+        height: 35px;
+        border-bottom: 1px solid #8697A6;
+    }
+
+    .container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+}
