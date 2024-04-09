@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
-/* font-family: 'Mukta', sans-serif; 
-    font-family: 'Dosis';
-*/
+
 * {
     box-sizing: border-box;
-
-
+    margin: 0;
 }
 
 /* 電腦與平板上應用的樣式 */
 body {
     background-color: rgb(237, 237, 237);
     margin: 0px;
-    font-size: 16px;
+    font-size: 12px;
     font-family: "Dosis", "Noto Sans TC";
     letter-spacing: 2px;
 }
@@ -28,10 +25,9 @@ header {
 
 .logo {
     width: 100px;
-    height: 60px;
+    height: 30px;
     background-color: #8697A6;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     align-items: center;
 }
@@ -74,43 +70,301 @@ ol li a {
     display: none;
 }
 
-#About {
+.banner {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#svg-big {
+    width: 50%;
+    color: rgba(255, 127, 35, 0.853);
+    /* background-color: #0fbec6; */
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    overflow: visible;
+    z-index: -1;
+
+}
+
+#svg-small {
+    width: 10%;
+    color: rgba(255, 127, 35, 0.853);
+    /* background-color: #0fbec6; */
+    position: absolute;
+    bottom: -350px;
+    left: 10%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+
+    animation: rotate 10s ease-in-out infinite alternate both
+}
+
+
+
+
+
+@keyframes pulsate-bck {
+    0% {
+        transform: translateX(-500px) rotate(-540deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(.9) rotate(30deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+.pulsate-bck {
+    animation: pulsate-bck 10s ease-in-out 0s infinite alternate both
+}
+
+
+@keyframes slide-bl {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100px) translateX(-100px);
+        opacity: 0;
+    }
+}
+
+.slide-bl {
+    animation: slide-bl 1s cubic-bezier(.55, .085, .68, .53) 1s reverse both
+}
+
+.banner-name {
+    font-size: 1rem;
+}
+
+.banner-slogan {
+    font-size: 1.3rem;
+}
+
+#About #Banner {
     background: #798C8C;
 }
 
-.container {
+h4 {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.small-text {
+    font-size: 0.8em;
+    font-weight: 300;
+    text-align: end;
+    color: rgb(244, 244, 244);
+}
+
+h6 {
+    align-self: center;
+    font-size: 11px;
+    width: 85px;
+
+}
+
+.bars-parent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.bar {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.bar-holder {
+
+    font-size: 0.8em;
+    line-height: 0.7;
+    height: 10px;
+    width: 200px;
+    margin: auto;
+    background: #606d78;
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.bar-1 {
+    color: #ffffff;
+    text-align: center;
+    width: 90%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #c96969, #ce6363, #d35d5c, #d85656, #dc4f4f);
+}
+
+.bar-2 {
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #587e8c, #588ca0, #579bb4, #54aac9, #4fb9df);
+}
+
+.bar-3 {
+    color: #ffffff;
+    text-align: center;
+    width: 60%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #f2b950, #f4c34f, #f4ce4e, #f4d94e, #f2e450);
+}
+
+.bar-4 {
+    color: #ffffff;
+    text-align: center;
+    width: 40%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #8c66b5, #9365bf, #9b64c9, #a462d3, #ad60dc);
+}
+
+.bar-5 {
+    color: #ffffff;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #5fb322, #56bc2f, #4ac53c, #38ce49, #12d757);
+}
+
+
+#About .container {
     width: 80%;
     margin: auto;
-
     display: flex;
-    /* height: 500px; */
+
     align-items: stretch;
     justify-content: space-between;
 
 }
 
-.h500px {
-    height: 500px
+
+
+
+.container-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+
 }
+
+.h500px {
+    height: 90%;
+}
+
 
 
 .my-photo {
     display: flex;
-    width: 40%;
-    background-color: #4c5459;
-    justify-content: center;
-    align-items: center;
+    width: 43%;
+    /* background-color: #4c5459; */
+    justify-content: end;
     font-size: 20px;
+}
+
+.banner-photo {
+
+    width: 80%;
+    height: auto;
+    position: relative;
+    top: 0;
+}
+
+.banner-photo img {
+    width: 100%;
+    box-shadow: -10px 13px 0px #AEBFBE;
+
 }
 
 .description {
     display: flex;
+    flex-direction: column;
     width: 50%;
     background-color: #AEBFBE;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 20px;
+    font-size: 11px;
+    margin-bottom: 50px;
 }
+
+.about {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+
+}
+
+.about-box {
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+h3 {
+
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+
+#About ol {
+    /* display: block; */
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.about-degree-box {
+    width: 100%;
+    height: 50px;
+    padding: 6px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #8697A6;
+}
+
 
 #Experience {
     background-color: #8697A6;
@@ -118,11 +372,10 @@ ol li a {
 }
 
 #Experience .container {
-    flex-wrap: wrap;
-    flex-direction: row;
-    display: flex;
-
+    width: 80%;
+    margin: auto;
 }
+
 
 .job-timeline {
     display: flex;
@@ -131,30 +384,34 @@ ol li a {
 
 .job-timeline li {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px dashed slategray;
     align-items: center;
-
-
 }
 
 .job_date {
-    width: 15%;
-    font-weight: 900;
+    width: 130px;
+    font-weight: 600;
 }
 
-
-
 .company-name {
-    width: 23%;
+    width: 200px;
+}
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 5%;
+    margin-inline-end: 5%;
+    unicode-bidi: isolate;
 }
 
 .jobpic {
     display: flex;
-    margin-right: 5%;
     width: 20%;
 }
 
@@ -176,70 +433,78 @@ ol li a {
     color: white;
     text-shadow: 1px 1px 5px #585858;
     letter-spacing: 2px;
+    padding: 20px 0 25px;
 }
 
-
-#Skills {
-    background-color: #F2EFDF;
-    padding: 3% 0;
-    /* padding: 30px 0;
-     */
+#Portfolio {
+    background-color: #161920;
 }
 
-.shortcut {
-    display: flex;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    /* background-color: #59554C; */
+#Portfolio .container {
     width: 80%;
-    /* height: 400px; */
-    justify-content: space-between;
+    margin: auto;
 }
 
-.shortcut>li {
-    background-color: #57c58a;
-    text-align: center;
-    line-height: 200px;
-    width: 30%;
-}
-
-#Photo {
-    background-color: #AEBFBE;
-    padding: 20px 0;
-}
-
-.photo-list {
-    display: flex;
-    width: 80%;
+#Portfolio .portfolio {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-    justify-content: space-between;
-    list-style-type: none;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* background-color: #579bc5; */
+    padding-bottom: 50px;
 }
 
-.photo-list>li {
-    background-color: #59554C;
-    width: 30%;
-    line-height: 100px;
-    /* margin-top: 2%;
-    margin-bottom: 2%; */
-    text-align: center;
+.card {
+    overflow: hidden;
+
 }
 
-.w-50 {
-    width: 50%;
-    margin-top: 20px
+.side-a {
+    width: 100%;
+    height: 100%;
 }
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.pic1 {
+    grid-area: 1 / 4 / 2 / 6;
+}
+
+.pic2 {
+    grid-area: 2 / 1 / 4 / 3;
+}
+
+.pic3 {
+    grid-area: 3 / 3 / 4 / 5;
+}
+
 
 #Contact {
     background-image: linear-gradient(to right top, #b7e976, #85e28e, #54d9a7, #24ccba, #0fbec6);
     display: flex;
     align-items: center;
     height: 500px;
+}
+
+#Contact .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    height: 500px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.w-50 {
+    width: 50%;
+    margin-top: 20px
 }
 
 #ContactForm {
@@ -273,9 +538,10 @@ label {
 
 .w-50 p {
     color: #303030;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
-
+    line-height: 1.5;
+    margin-bottom: 14px;
 }
 
 .myinfo {
@@ -285,17 +551,23 @@ label {
 
 .myinfo li {
     color: #303030;
-    font-size: 16px;
-    line-height: 2;
+    font-size: 12px;
+    line-height: 2.5;
     font-weight: 400;
-
-
-
+    display: flex;
+    /* 使用 Flex 布局 */
+    align-items: center;
+    /* 垂直居中 */
 }
 
 .fa-solid {
+    width: 23px;
     padding-right: 5px;
-    font-size: 20px;
+    font-size: 15px;
+    display: inline-block;
+    /* 使图标作为行内元素，以便与文字对齐 */
+    vertical-align: middle;
+    /* 垂直居中 */
 }
 
 
@@ -359,6 +631,8 @@ footer p {
 
 /* 手機 */
 @media screen and (max-width: 500px) {
+
+
     .menu {
         padding: 10px;
         margin: 5px;
@@ -371,8 +645,6 @@ footer p {
         border-radius: 50%;
     }
 
-
-
     header {
         flex-wrap: wrap;
     }
@@ -381,11 +653,11 @@ footer p {
         width: 100%;
     }
 
-    ol {
+    .nav-ol {
         flex-wrap: wrap;
     }
 
-    ol li {
+    .nav-ol li {
         width: 100%;
         height: 35px;
         border-bottom: 1px solid #8697A6;
@@ -396,4 +668,125 @@ footer p {
         flex-wrap: wrap;
     }
 
+    .banner {
+        width: 90%;
+        height: 250px;
+    }
+
+    #svg-big {
+        top: 50%;
+        right: -10%;
+        overflow: hidden;
+    }
+
+    #svg-small {
+        display: none;
+    }
+
+    #About .container {
+        width: 95%;
+        display: block;
+    }
+
+    .description {
+        width: 100%;
+        height: 500px;
+        border-radius: 0;
+        margin-bottom: 3%;
+        background-color: rgb(237, 237, 237);
+    }
+
+    .about-box {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 128px;
+    }
+
+    .my-photo {
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+        display: block;
+        width: 90%;
+
+    }
+
+    .banner-photo {
+        width: 80%;
+        margin: auto;
+    }
+
+    .banner-photo img {
+        width: 100%;
+
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        box-shadow: -10px 13px 0px #AEBFBE;
+        margin-bottom: 20%;
+    }
+
+    .job-timeline li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed slategray;
+        align-items: flex-start;
+    }
+
+    .jobpic {
+        order: 1;
+        width: 40%;
+    }
+
+    .company-name {
+        width: 60%;
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    #Portfolio .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 100px);
+        gap: 5px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .pic1 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .pic2 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .pic3 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    #Contact {
+        height: auto;
+    }
+
+    #Contact .container {
+        /* width: 80%; */
+        /* margin: auto; */
+        display: block;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .w-50 {
+        width: 100%;
+        margin: 0 auto 20px;
+
+    }
 }
